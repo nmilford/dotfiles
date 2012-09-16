@@ -1,3 +1,6 @@
+""" Install this file
+" curl https://raw.github.com/nmilford/dotfiles/master/vimrc > .vimrc
+
 """ Install Inconsolata.                                                                                                                                                            
 " sudo apt-get install ttf-inconsolata
 " gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_system_font" --type bool false
