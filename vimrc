@@ -46,51 +46,51 @@ let g:vimclojure#ParenRainbow = 1
 
 " Settings
 set nocompatible                " Does not need to be compatable with VI.
-filetype on											" Enables filetype detection.
+filetype on                     " Enables filetype detection.
 filetype plugin on              " Loads the filetype pluging for a file type when it is loaded.
-filetype indent on							" Loads indent settings per filetype.
-syntax enable										" Enabled syntax highlighting.
-set number											" Shows line numbers.
-set showmatch										" Show matching parenthesis.
-set nowrap											" Don't wrap lines.
-set backspace=indent,eol,start	" Make backspace work as expected regardless of mode.
-set ignorecase									" Ignore case when search pattern is all lower,
-set smartcase										" but is case-sensitive if not all lower.
-set hlsearch										" Highlight search terms.
-set incsearch										" Show search matches as you type.
-set wrapscan										" Set the search scan to wrap around the file
-set history=1000								" Remember more commands and search history
-set undolevels=1000							" Allow more undo levels.
-set title												" Change the terminal's title.
-set visualbell									" Don't beep!
-set noerrorbells								" Don't beep!
-set encoding=utf8								" UTF-8 encoding.
-set nobackup										" Let SCM deal with backups.
-set nowb												" Let SCM deal with backups.
-set noswapfile									" Let SCM deal with backups.
+filetype indent on              " Loads indent settings per filetype.
+syntax enable                   " Enabled syntax highlighting.
+set number                      " Shows line numbers.
+set showmatch                   " Show matching parenthesis.
+set nowrap                      " Don't wrap lines.
+set backspace=indent,eol,start  " Make backspace work as expected regardless of mode.
+set ignorecase                  " Ignore case when search pattern is all lower,
+set smartcase                   "   but is case-sensitive if not all lower.
+set hlsearch                    " Highlight search terms.
+set incsearch                   " Show search matches as you type.
+set wrapscan                    " Set the search scan to wrap around the file
+set history=1000                " Remember more commands and search history
+set undolevels=1000             " Allow more undo levels.
+set title                       " Change the terminal's title.
+set visualbell                  " Don't beep!
+set noerrorbells                " Don't beep!
+set encoding=utf8               " UTF-8 encoding.
+set nobackup                    " Let SCM deal with backups.
+set nowb                        " Let SCM deal with backups.
+set noswapfile                  " Let SCM deal with backups.
 set expandtab                   " Tabs are spaces.
-set shiftwidth=2								" Indents are 2 spaces.
-set tabstop=2										" A tab is 2 spaces.
-set softtabstop=2								" Controls tab in inset mode.
-set showmode										" Display the current mode.
-set ruler												" Displays the cursor position in the buffer.
+set shiftwidth=2                " Indents are 2 spaces.
+set tabstop=2                   " A tab is 2 spaces.
+set softtabstop=2               " Controls tab in inset mode.
+set showmode                    " Display the current mode.
+set ruler                       " Displays the cursor position in the buffer.
 set cursorline                  " Highlights current line.
 set laststatus=2                " Always show the status line.
-set statusline+=%-3.3n\                      " Status: Buffer number.
-set statusline+=%f\                          " Status: Filename.
-set statusline+=%h%m%r%w                     " Status: Flags.
-set statusline+=\[%{strlen(&ft)?&ft:'none'}] " Status: FileType
-set statusline+=\ [%{getcwd()}]              " Status: Current directory.
-set statusline+=\ %{fugitive#statusline()}   " Status: Git info.
-set statusline+=%=                           " Status: Right justify.
-set statusline+=0x%-8B                       " Status: Character value.
-set statusline+=%-14(%l,%c%V%)               " Status: Line and character.
-set statusline+=%<%P                         " Status: File position.
-set background=dark							" Enabled the Solarized color scheme.
+set statusline+=%-3.3n\                       " Status: Buffer number.
+set statusline+=%f\                           " Status: Filename.
+set statusline+=%h%m%r%w                      " Status: Flags.
+set statusline+=\[%{strlen(&ft)?&ft:'none'}]  " Status: FileType
+set statusline+=\ [%{getcwd()}]               " Status: Current directory.
+set statusline+=\ %{fugitive#statusline()}    " Status: Git info.
+set statusline+=%=                            " Status: Right justify.
+set statusline+=0x%-8B                        " Status: Character value.
+set statusline+=%-14(%l,%c%V%)                " Status: Line and character.
+set statusline+=%<%P                          " Status: File position.
+set background=dark             " Enabled the Solarized color scheme.
 set t_Co=16                     " Enabled the Solarized color scheme.
 let g:solarized_termcolors=16   " Enabled the Solarized color scheme.
 colorscheme solarized           " Enabled the Solarized color scheme.
-let g:paredit_mode = 1          " Enables mode for matching braces, brackets and parenthesis for LISPs.
+let g:paredit_mode=1            " Enables mode for matching braces, brackets and parenthesis for LISPs.
 
 " 'sudo' saves the file.
 cmap w!! %!sudo tee > /dev/null %                                                                                                               
