@@ -1,5 +1,7 @@
-""" Install this file
-" curl https://raw.github.com/nmilford/dotfiles/master/vimrc > .vimrc
+" I work in Ubuntu & LinuxMint.  This is what I do to setup my environment.
+
+""" Install this file.
+" curl https://raw.github.com/nmilford/dotfiles/master/vimrc > ~/.vimrc
 
 """ Install Inconsolata.                                                                                                                                                            
 " sudo apt-get install ttf-inconsolata
@@ -11,8 +13,10 @@
 " gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string "#070736364242:#D3D301010202:#858599990000:#B5B589890000:#26268B8BD2D2:#D3D336368282:#2A2AA1A19898:#EEEEE8E8D5D5:#00002B2B3636:#CBCB4B4B1616:#58586E6E7575:#65657B7B8383:#838394949696:#6C6C7171C4C4:#9393A1A1A1A1:#FDFDF6F6E3E3"
 
 """ Install git.
-" CentOS/RHEL:    sudo yum install git
-" Debian/Ubuntu:  sudo apt-get install git
+" sudo apt-get install git
+
+""" Install ctags for tagbar. 
+" sudo apt-get install exuberant-ctags
 
 """ Install Vundle.
 " mkdir -p ~/.vim/bundle/
@@ -36,16 +40,21 @@ Bundle 'tpope/vim-markdown'
 Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'guns/paredit'
+Bundle 'taglist.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'uguu-org/vim-matrix-screensaver'
 
 """ Install VimClojure
 " VimClojure does not work with Vundle, but pathogen makes it run.
-" git clone git://github.com/vim-scripts/VimClojure.git ~/.vim/bundle/VimClojure
 " Uncomment below to install.
-"Bundle "tpope/vim-pathogen"
-"filetype off
-"call pathogen#runtime_append_all_bundles()
-"let g:vimclojure#HighlightBuiltins = 1
-"let g:vimclojure#ParenRainbow = 1
+Bundle 'haesken/vimclojure-vundle'
+Bundle "tpope/vim-pathogen"
+filetype off
+call pathogen#runtime_append_all_bundles()
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let tlist_clojure_settings = 'lisp;f:function'
+let g:paredit_mode=1            
 
 " Settings
 set nocompatible                " Does not need to be compatable with VI.
@@ -64,7 +73,6 @@ set incsearch                   " Show search matches as you type.
 set wrapscan                    " Set the search scan to wrap around the file
 set history=1000                " Remember more commands and search history
 set undolevels=1000             " Allow more undo levels.
-set title                       " Change the terminal's title.
 set visualbell                  " Don't beep!
 set noerrorbells                " Don't beep!
 set encoding=utf8               " UTF-8 encoding.
@@ -93,10 +101,14 @@ set background=dark             " Enabled the Solarized color scheme.
 set t_Co=16                     " Enabled the Solarized color scheme.
 let g:solarized_termcolors=16   " Enabled the Solarized color scheme.
 colorscheme solarized           " Enabled the Solarized color scheme.
-let g:paredit_mode=1            " Enables mode for matching braces, brackets and parenthesis for LISPs.
 
 " 'sudo' saves the file.
-cmap w!! %!sudo tee > /dev/null %                                                                                                               
+cmap w!! %!sudo tee > /dev/null % <CR>                                                                                                             
 
 " Toggle NERDTree
 map <F2> :NERDTreeToggle<CR>
+
+" Toggle TagList
+nmap <F8> :TagbarToggle<CR>
+
+map <F3> :TlistToggle<CR>
