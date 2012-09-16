@@ -25,7 +25,6 @@ call vundle#rc()
 " List plugins by github addresses, unless explicitly otherwise.
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'VimClojure'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
@@ -33,7 +32,17 @@ Bundle 'vcscommand.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'haesken/vimclojure-vundle'
+Bundle 'guns/paredit'
 
+""" Install VimClojure
+" VimClojure does not work with Vundle, but pathogen makes it run.
+" git clone git://github.com/vim-scripts/VimClojure.git ~/.vim/bundle/VimClojure
+Bundle "tpope/vim-pathogen"
+filetype off
+call pathogen#runtime_append_all_bundles()
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
 
 " Settings
 set nocompatible                " Does not need to be compatable with VI.
@@ -81,6 +90,7 @@ set background=dark							" Enabled the Solarized color scheme.
 set t_Co=16                     " Enabled the Solarized color scheme.
 let g:solarized_termcolors=16   " Enabled the Solarized color scheme.
 colorscheme solarized           " Enabled the Solarized color scheme.
+let g:paredit_mode = 1          " Enables mode for matching braces, brackets and parenthesis for LISPs.
 
 " 'sudo' saves the file.
 cmap w!! %!sudo tee > /dev/null %                                                                                                               
