@@ -109,6 +109,5 @@ cmap w!! %!sudo tee > /dev/null % <CR>
 map <F2> :NERDTreeToggle<CR>
 
 " Toggle TagList
-nmap <F8> :TagbarToggle<CR>
+map <F3> :TagbarToggle<CR>
 
-map <F3> :TlistToggle<CR>
