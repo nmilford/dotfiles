@@ -35,17 +35,17 @@ Bundle 'vcscommand.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'haesken/vimclojure-vundle'
 Bundle 'guns/paredit'
 
 """ Install VimClojure
 " VimClojure does not work with Vundle, but pathogen makes it run.
 " git clone git://github.com/vim-scripts/VimClojure.git ~/.vim/bundle/VimClojure
-Bundle "tpope/vim-pathogen"
-filetype off
-call pathogen#runtime_append_all_bundles()
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
+" Uncomment below to install.
+"Bundle "tpope/vim-pathogen"
+"filetype off
+"call pathogen#runtime_append_all_bundles()
+"let g:vimclojure#HighlightBuiltins = 1
+"let g:vimclojure#ParenRainbow = 1
 
 " Settings
 set nocompatible                " Does not need to be compatable with VI.
