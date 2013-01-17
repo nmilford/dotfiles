@@ -41,6 +41,7 @@ Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'guns/paredit'
 Bundle 'taglist.vim'
+Bundle 't9md/vim-chef'
 Bundle 'majutsushi/tagbar'
 Bundle 'uguu-org/vim-matrix-screensaver'
 
