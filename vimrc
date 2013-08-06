@@ -44,6 +44,7 @@ Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'uguu-org/vim-matrix-screensaver'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'honza/dockerfile.vim'
 
 """ Install VimClojure
 " VimClojure does not work with Vundle, but pathogen makes it run.
