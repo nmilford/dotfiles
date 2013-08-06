@@ -41,9 +41,9 @@ Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'guns/paredit'
 Bundle 'taglist.vim'
-Bundle 't9md/vim-chef'
 Bundle 'majutsushi/tagbar'
 Bundle 'uguu-org/vim-matrix-screensaver'
+Bundle 'elixir-lang/vim-elixir'
 
 """ Install VimClojure
 " VimClojure does not work with Vundle, but pathogen makes it run.
@@ -60,8 +60,8 @@ let g:paredit_mode=1
 " Settings
 set nocompatible                " Does not need to be compatable with VI.
 filetype on                     " Enables filetype detection.
-filetype plugin on              " Loads the filetype pluging for a file type when it is loaded.
-filetype indent on              " Loads indent settings per filetype.
+filetype plugin off              " Loads the filetype pluging for a file type when it is loaded.
+filetype indent off              " Loads indent settings per filetype.
 syntax enable                   " Enabled syntax highlighting.
 set number                      " Shows line numbers.
 set showmatch                   " Show matching parenthesis.
