@@ -28,7 +28,7 @@
 
 " Vundle to manage my plugins.
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+silent! call vundle#rc()
 " List plugins by github addresses, unless explicitly otherwise.
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
@@ -37,7 +37,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vcscommand.vim'
 Bundle 'tpope/vim-markdown'
-" Bundle 'rson/vim-conque'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'guns/paredit'
 Bundle 'taglist.vim'
@@ -52,7 +51,7 @@ Bundle 'honza/dockerfile.vim'
 Bundle 'haesken/vimclojure-vundle'
 Bundle "tpope/vim-pathogen"
 filetype off
-call pathogen#runtime_append_all_bundles()
+silent! call pathogen#incubate()
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 let tlist_clojure_settings = 'lisp;f:function'
@@ -102,7 +101,7 @@ set statusline+=%<%P                          " Status: File position.
 set background=dark             " Enabled the Solarized color scheme.
 set t_Co=16                     " Enabled the Solarized color scheme.
 let g:solarized_termcolors=16   " Enabled the Solarized color scheme.
-colorscheme solarized           " Enabled the Solarized color scheme.
+silent! colorscheme solarized           " Enabled the Solarized color scheme.
 
 " 'sudo' saves the file.
 cmap w!! %!sudo tee > /dev/null % <CR>                                                                                                             
