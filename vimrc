@@ -28,7 +28,7 @@
 
 " Vundle to manage my plugins.
 set rtp+=~/.vim/bundle/vundle/
-silent! call vundle#rc()
+call vundle#rc()
 " List plugins by github addresses, unless explicitly otherwise.
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
